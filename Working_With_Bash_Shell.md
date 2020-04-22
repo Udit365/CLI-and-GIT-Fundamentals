@@ -1,4 +1,4 @@
-## Basic Commands
+## Basic Bash Commands
 
 With some basic knowledge of gitbash commands, we can seamlessly work across the folder and files.
 
