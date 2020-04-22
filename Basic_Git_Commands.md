@@ -119,3 +119,17 @@ Anytime if we want to see the status of our git project then, we can just pass t
 ```bash
 git status
 ```
+
+#### Viewing the Changes
+
+To view what changes we have made, we have to pass the following code :
+```bash
+git diff
+```
+By executing the above code, we can only able to see the changes and not the entire document.
+
+To view the changes in the staged files, we have to pass the following command :
+
+```bash
+git diff --staged
+```
