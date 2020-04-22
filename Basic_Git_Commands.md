@@ -138,3 +138,80 @@ or,
 ```bash
 git diff --cached
 ```
+
+#### Tracking File Deletion
+
+There are two ways by which we can track the changes due to deletion of a tracked file (committed/staged).
+
+- Removing file manually
+- Removing file through Git
+
+***Removing file manually***
+
+We can manually delete the file using gitbash CLI or, by interacting with GUI.
+
+*Using the gitbash CLI, we can remove the file as follows :*
+```bash
+rm FileName.txt
+```
+Now to commit this change, we have to pass the following code :
+
+```bash
+git rm FileName.txt
+```
+
+The above code will put the change in staging area and then, we can commit this change as usual :
+
+```bash
+git commit -m "Deleted the file named FileName.txt"
+```
+
+***Removing file through Git***
+
+Rather than manually deleting a file and then committing that change, we can directly delete the file using git specific command and then commit it as usual.
+
+The following code deletes the file from the directory and adds the change in the staged area as well :
+
+```bash
+git rm FileName.txt
+```
+Then, we can commit the change as follows :
+
+```bash
+git commit -m "Deleted the file named FileName.txt"
+```
+
+#### Moving & Renaming Files
+
+Just like deletion operation, we can perform renaming and moving of files in two ways but, its more convenient to perform this using git specific command.
+
+For git, moving and renaming of a file and essentially the similar kind of changes.
+
+So to rename a file through git specific command, we need to pass the following command :
+
+```bash
+git mv FileName.txt NewFileName.txt
+```
+The above code will rename the file and add it to the staged area and then we can commit the change as follows :
+
+```bash
+git commit -m "Renaming the file"
+```
+
+Now, if we would have renamed the file manually then, we have to pass the following command to stage the changes :
+
+```bash
+git rm FileName.txt
+git add NewFileName.txt
+```
+Similarly, to move a file to some other folder in the directory, we can use the following git specific command :
+
+```bash
+git mv FileName.txt Subfolder/FileName.txt
+```
+
+Then, we can commit the changes as follows :
+
+```bash
+git commit -m "Renamed and moved file name"
+```
