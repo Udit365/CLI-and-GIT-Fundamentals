@@ -133,3 +133,8 @@ To view the changes in the staged files, we have to pass the following command :
 ```bash
 git diff --staged
 ```
+or,
+
+```bash
+git diff --cached
+```
