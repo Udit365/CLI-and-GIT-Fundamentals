@@ -39,15 +39,27 @@ To see how git keeps track of the changes made in the file, first we need to mak
 Let's first create a simple text file and save it in the respository
 
 ```bash
-touch My_file.text
+touch My_file.txt
 ```
-Now, after editing and saving the chnages, we need stage the file to git as follows :
+Now, after editing and saving the changes, we need stage the file to git as follows :
 
 ```bash
 git add .
 ```
 With `.` sign, we tell git to stage all changes in the current directory.
 
+To stage a single file, we need to pass the following code :
+
+```bash
+git add My_first_file.txt
+```
+>If the file name has spaces then, we should enclose it within single/double quotes.
+
+Similarly, we can stage multiple files by separating the file names with spaces, as follows :
+
+```bash
+git add MYfile1.txt NextFile.py 'Hello world.py'
+```
 Now, we need to commit the changes, so that git can track the changes :
 
 ```bash
@@ -73,7 +85,7 @@ git log
  ````
  The above code will show all the commits made since 1st January 2020.
 
- Similarly, instead of of `since`, we can use `until` as a date filter to our commit log message :
+ Similarly, instead of `since`, we can use `until` as a date filter to our commit log message :
 
  ```bash
  git log --until=2020-01-01
