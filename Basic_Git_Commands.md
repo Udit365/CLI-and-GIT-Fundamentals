@@ -82,16 +82,30 @@ To provide a message during direct commit, we can pass the code as follows :
 ```bash
 git commit -am 'Minor edits'
 ```
+To provide multiline commit message, we have to pass the `commit` command without `-m` as follows :
+```bash
+git commit -a
+```
+The above command will throw the following message on the screen and after a few seconds, it will open a window on the default editor to type our multi-line commit message :
+```
+hint: Waiting for your editor to close the file...
+```
 
+The following convention is generally followed for a multiline commit message :
 
+```
+Here goes the commit brief
 
+A little descriptive commit message trhat explains the commit heading
+```
+After writing our commit message, we have to save and close the file and after that, git will show the heading of our commit message in the command window.
 
 #### Commit Message Best Practices
 
 
 
 
-#### Viewing Commit Log
+#### Viewing Commit
 
 To view the commits made to the repository, we need to pass the following command :
 
@@ -133,6 +147,8 @@ The above code will return any commit that has "*Init*" string in the commit mes
 
 > `grep` stands for "*Global Regular Expression*"
 
+
+
 #### Viewing Current Status
 
 Anytime if we want to see the status of our git project then, we can just pass the following command :
@@ -140,7 +156,7 @@ Anytime if we want to see the status of our git project then, we can just pass t
 git status
 ```
 
-#### Viewing & Comparing the Changes
+#### Viewing Changes
 
 To view what changes we have made, we have to pass the following code :
 ```bash
@@ -168,12 +184,46 @@ similarly, for staged files :
 ```bash
 git diff --staged --color-words
 ```
+To view what we have done in a specific commit then, we have to pass the following command :
 
+```bash
+git show 1c16945
+```
+> Each commit has a unique commit ID associated with it and by passing the first few characters(6-8 characters) of that ID, `git show` command is able to identify the correct commit and shows us the change.
+
+Similarly, to see the changes made in the last commit, we can pass the `HEAD` instead of the unique commit ID :
+
+```bash
+git show HEAD
+```
 When there is multiple and lots of changes then, gitbash uses a paginator (`:` symbol) after showing a certain number of changes and we can use `F` and `B` keys or, `Spacebar` to see further lines.
 
 To toggle between wrapping and chopping of long lines we can type `-` and then hit the `Enter`.
 
 To quit this paginator view, we have to use the `q` key.
+
+#### Comparing Changes
+
+To compare any two commits, we can pass the following command :
+
+```bash
+git diff 1c16945..9dcff6ef6
+```
+> The first few initial characters of unique commit IDs are separated by `..` in the above code
+
+Similarly, to compare the changes in the last made commit with some other commit, we can pass the following command :
+
+```bash
+git diff 1c16945..HEAD
+```
+
+To view the comparison as highlighted texts :
+```bash
+git diff 1c16945..HEAD --color-words
+```
+
+
+
 
 
 
