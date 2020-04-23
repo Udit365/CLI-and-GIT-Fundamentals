@@ -387,4 +387,21 @@ The above code will flush out the untracked files.
 
 #### Ignoring Files
 
- 
+To ignore a file means is to ignore the changes made to that file ,i.e., git will simply not track any changes made to that file.
+
+If we want to do so, then, we can create a file name `.gitignore` and then, we will put all those files that we don't want to keep track of.
+
+Suppose, we want to ignore a file name "*file.log*" then, we just have top write this file name in the "*.gitignore*" file.
+
+Here as an example of a ".gitignore" file :
+
+```gitignore
+# Demo/example
+
+.DS_Store
+*.zip
+*.gz
+log/*
+log/*.log.[0-9]
+access.log
+```
