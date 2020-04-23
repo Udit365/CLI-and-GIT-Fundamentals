@@ -32,7 +32,7 @@ ls -la .git/config
 ```
 if we remove the `.git` from the repository then, it will no longer remain as a repository and work as an ordinary folder.
 
-#### Committing Changes
+#### Staging & Committing Changes
 
 To see how git keeps track of the changes made in the file, first we need to make some changes like creating a new file or, editing a file etc. and commit them.
 
@@ -65,6 +65,26 @@ Now, we need to commit the changes, so that git can track the changes :
 ```bash
 git commit -m "Initial Commit"
 ```
+
+We can directly commit the changes ,i.e., we can skip the staging step by passing the following command -:
+
+```bash
+git commit --all
+```
+or,
+
+```bash
+git commit -a
+```
+> `-a` or, `--all` removes the need of staging of files.
+
+To provide a message during direct commit, we can pass the code as follows :
+```bash
+git commit -am 'Minor edits'
+```
+
+
+
 
 #### Commit Message Best Practices
 
@@ -120,7 +140,7 @@ Anytime if we want to see the status of our git project then, we can just pass t
 git status
 ```
 
-#### Viewing the Changes
+#### Viewing & Comparing the Changes
 
 To view what changes we have made, we have to pass the following code :
 ```bash
@@ -138,6 +158,26 @@ or,
 ```bash
 git diff --cached
 ```
+If we want to see the changes as highlighted texts, then we can pass the following command -:
+
+```bash
+git diff --color-words
+```
+similarly, for staged files :
+
+```bash
+git diff --staged --color-words
+```
+
+When there is multiple and lots of changes then, gitbash uses a paginator (`:` symbol) after showing a certain number of changes and we can use `F` and `B` keys or, `Spacebar` to see further lines.
+
+To toggle between wrapping and chopping of long lines we can type `-` and then hit the `Enter`.
+
+To quit this paginator view, we have to use the `q` key.
+
+
+
+
 
 #### Tracking File Deletion
 
