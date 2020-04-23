@@ -112,7 +112,12 @@ To view the commits made to the repository, we need to pass the following comman
 ```bash
 git log
 ```
- To view commit log since a certain date :
+If we have many multi-line commits, then, the output of the above command will appear a bit messy. So, if we want to see the commits only with the commit headers, then we can pass the following command :
+```bash
+git log --oneline
+```
+
+To view commit log since a certain date :
 
  ```bash
  git log --since=2020-01-01
