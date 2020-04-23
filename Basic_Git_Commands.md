@@ -5,7 +5,6 @@ To initialize a repository, first we need to create a directory in a place of ou
 #### Initialize a git repository
 
 Let's say, we want to initialize a repository in a folder named "New_Project" in *D-drive* :
-
 ```bash
 cd D://
 mkdir New_Project
@@ -55,6 +54,12 @@ git add My_first_file.txt
 ```
 >If the file name has spaces then, we should enclose it within single/double quotes.
 
+To add a file and everything else present in the same folder into the staging area, we can use the wildcard `*` :
+
+```bash
+git add My_first_file.txt*
+```
+
 Similarly, we can stage multiple files by separating the file names with spaces, as follows :
 
 ```bash
@@ -102,6 +107,7 @@ After writing our commit message, we have to save and close the file and after t
 
 #### Commit Message Best Practices
 
+#### Atomic Commits
 
 
 
@@ -310,3 +316,75 @@ Then, we can commit the changes as follows :
 ```bash
 git commit -m "Renamed and moved file name"
 ```
+
+#### Undo Changes
+If for some reason, we made some changes and saved the changes that we don't actually wanted then, using git we can actually revert back.
+
+The following command, undo the changes for us :
+
+```bash
+git checkout -- fileName.txt
+```
+To undo all the changes :
+
+```bash
+git checkout -- .
+```
+
+To undo the staging of files, i.e., to unstage files, we can pass the following command :
+
+```bash
+git reset HEAD fileName.txt
+```
+> The above command, unstages the "*fileName.txt*" from the staging area.
+
+To unstage everything :
+
+```bash
+git reset HEAD .
+```
+
+#### Amending Commits
+
+Let's assume a situation where we are supposed to make some extra changes in our previous commit but, unfortunately forgot to do so.
+
+Now, if we add further changes to our previous/last commit or, maybe wanted to change the commit message then, we can use the following command to do so :
+
+```bash
+git commit --amend -m 'adds new items'
+```
+> Amending can be done only on the most recent commit.
+
+#### Retrieving Old Versions
+If we want to make some changes in some older commits that we have made then, we have to go through the following steps :
+
+First, retrieve the old version by undoing changes to the commit following :
+```bash
+git checkout d4450dc7fa7 -- example.txt
+```
+
+The above code will add the older version file into the staging area and now, we can make changes on it and then, commit it again.
+
+#### Revert a Commit
+To make things as they were before our commit, we have to pass the following command :
+
+```bash
+git revert 6794c13e5203
+```
+Similarly, to revert our most recent commit :
+
+```bash
+git revert HEAD
+```
+#### Removing Untracked Files
+
+Untracked files are those that are neither committed nor placed in the staging area and for some reason if we want to remove those files then, we can do it directly from git as follows :
+
+```bash
+git clean -f
+```
+The above code will flush out the untracked files.
+
+#### Ignoring Files
+
+ 
