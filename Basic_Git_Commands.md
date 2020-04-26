@@ -460,22 +460,31 @@ To change our branch, we need to pass the following command :
 git checkout branch-name
 ```
 
-#### Cloning a Git Repository
+#### Working With GitHub
+---
+
+
+##### Cloning a Git Repository
 
 To clone a repository present in Github, we need to pass the following command :
 
 ```bash
 git clone repository-address.git
 ```
-#### Pushing Changes to GitHub
+##### Pushing Changes to GitHub
 
 After committing changes, we are supposed to push everything to our GitHub and for doing so, we can pass the following command :
+
+```bash
+git push
+```
+
 
 ```bash
 git push --set-upstream origin <BRANCH-NAME>
 ```
 
-#### Fetching Changes
+##### Fetching Changes
 To avoid conflicts and to make sure that we are working with latest changes, we first need to fetch the changes from GitHub. To do so, we need to pass the following command :
 
 ```bash
