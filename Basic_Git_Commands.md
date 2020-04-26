@@ -478,7 +478,7 @@ After committing changes, we are supposed to push everything to our GitHub and f
 ```bash
 git push
 ```
-
+or,
 
 ```bash
 git push --set-upstream origin <BRANCH-NAME>
@@ -490,3 +490,11 @@ To avoid conflicts and to make sure that we are working with latest changes, we 
 ```bash
 git pull
 ```
+
+##### Adding Existing Git Project to GitHub
+
+If we have a Git project locally on our system and we want to add it to GitHub then, we need to follow the following steps :
+
+1. Create a new repository on GitHub and to avoid errors, we are advised not to initialize the repository with `.gitignore` or, `Readme.md` file.
+
+ 
