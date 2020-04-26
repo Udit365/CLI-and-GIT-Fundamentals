@@ -442,3 +442,42 @@ log/*
 log/*.log.[0-9]
 access.log
 ```
+
+
+#### Creating a Branch
+To create a branch in our repository, we need to pass the following command -:
+```bash
+git brand branch-name
+```
+To see all the available branches in our repository, we can pass the following command -:
+
+```bash
+git branch --all
+```
+#### Branch Navigation
+To change our branch, we need to pass the following command :
+```bash
+git checkout branch-name
+```
+
+#### Cloning a Git Repository
+
+To clone a repository present in Github, we need to pass the following command :
+
+```bash
+git clone repository-address.git
+```
+#### Pushing Changes to GitHub
+
+After committing changes, we are supposed to push everything to our GitHub and for doing so, we can pass the following command :
+
+```bash
+git push --set-upstream origin <BRANCH-NAME>
+```
+
+#### Fetching Changes
+To avoid conflicts and to make sure that we are working with latest changes, we first need to fetch the changes from GitHub. To do so, we need to pass the following command :
+
+```bash
+git pull
+```
