@@ -1,5 +1,42 @@
 ## Basic Git Commands
 
+Before performing any operation on Git, first we need to do some basic configuration.
+
+There are three types of configuration available in Git, i.e.,
+
+1. Local Level
+2. Global Level / User Level
+3. System Level
+
+Configuration made at local level is valid for a specific repository whereas, that of made at global level is valid for a specific user (all repositories of the user) and system level is valid for all the users of the system.
+
+The two essential configuration that Git needs before start working is the "*User Name*" and "*Email Address*".
+
+For setting up the user name (at Global level) :
+
+```bash
+git config --global user.name "User Name"
+```
+To check the user name after setting it up :
+
+```bash
+git config --global user.name
+```
+Similarly, for setting up the email ID :
+
+```bash
+git config --global user.email "Email Id"
+```
+To check the email ID after setting it up :
+
+```bash
+git config --global user.email
+```
+
+
+
+
+
 To initialize a repository, first we need to create a directory in a place of our choice in the hard drive and then, we have to make it as our current working directory.
 
 #### Initialize a git repository
