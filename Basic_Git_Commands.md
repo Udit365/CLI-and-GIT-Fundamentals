@@ -270,13 +270,6 @@ To view the comparison as highlighted texts :
 git diff 1c16945..HEAD --color-words
 ```
 
-
-
-
-
-
-
-
 #### Tracking File Deletion
 
 There are two ways by which we can track the changes due to deletion of a tracked file (committed/staged).
