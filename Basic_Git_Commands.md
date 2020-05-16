@@ -468,16 +468,23 @@ git clone repository-address.git
 
 After committing changes, we are supposed to push everything to our GitHub and for doing so, we can pass the following command :
 
+
+To push changes to the current branch we are in :
+
 ```bash
 git push
 ```
 or,
+
+
+We can push changes to a specific branch as follows :
 
 ```bash
 git push --set-upstream origin <BRANCH-NAME>
 ```
 
 ##### Fetching Changes
+
 To avoid conflicts and to make sure that we are working with latest changes, we first need to fetch the changes from GitHub. To do so, we need to pass the following command :
 
 ```bash
