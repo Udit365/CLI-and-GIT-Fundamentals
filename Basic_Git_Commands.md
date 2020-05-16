@@ -496,4 +496,20 @@ git pull
 If we have a Git project locally on our system and we want to add it to GitHub then, we need to follow the following steps :
 
 1. Create a new repository on GitHub and to avoid errors, we are advised not to initialize the repository with `.gitignore` or, `README.md` file.
-2. Create `.gitignore` or, `README.md` files on the local respository.
+2. Create `.gitignore` or, `README.md` files on the local respository and commit them to `master`.
+3. Copy the repository link from GitHub and pass the following command to add the remote origin :
+
+```bash
+git remote add origin https://github.com/UserName/RepositoryName.git
+```
+4. To add and commit any chnages (if exists) then, we need to pass the following commands:
+
+```bash
+git add .
+git commit -m "Initializing Remote Repository"
+```
+5. Now, to push everything to the `master` branch of remote repository, we need to pass the following command :
+
+```bash
+git push -u origin master
+```
