@@ -495,6 +495,5 @@ git pull
 
 If we have a Git project locally on our system and we want to add it to GitHub then, we need to follow the following steps :
 
-1. Create a new repository on GitHub and to avoid errors, we are advised not to initialize the repository with `.gitignore` or, `Readme.md` file.
-
- 
+1. Create a new repository on GitHub and to avoid errors, we are advised not to initialize the repository with `.gitignore` or, `README.md` file.
+2. Create `.gitignore` or, `README.md` files on the local respository.
