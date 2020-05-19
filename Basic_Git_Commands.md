@@ -462,7 +462,7 @@ git checkout branch-name
 To clone a repository present in Github, we need to pass the following command :
 
 ```bash
-git clone repository-address.git
+git clone repo_URL
 ```
 ##### Pushing Changes to GitHub
 
